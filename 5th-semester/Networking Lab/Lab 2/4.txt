@@ -1,0 +1,14 @@
+ HTML Documents with Embedded Objects
+--------------------------------------
+
+Answer the following questions using the http-ethereal-trace-4 packet trace to answer the
+questions below :
+
+
+16. 3 GET requests were sent to the following IP's
+	128.119.245.12  (http://gaia.cs.umass.edu/ethereal-labs/lab2-4.html)
+	165.193.123.218 (http://www.aw-bc.com/catalog/images/pearson-logo-footer.gif)
+	134.241.6.82    (http://caite.cs.umass.edu/~kurose/cover.jpg)
+
+17. The images were downloaded in parallel because there are consecutive GET requests after which the images are downloaded. If the 	
+    download was serial, it would have been GET-OK-GET-OK version.

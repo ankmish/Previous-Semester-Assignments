@@ -1,0 +1,18 @@
+ Retrieving Long Documents
+---------------------------
+
+Answer the following questions using the http-ethereal-trace-3 packet trace to answer the
+questions below :
+
+
+12.  Only one HTTP GET request message made by the browser.
+	 Packet no. 8 in the trace contain request for Bills of Rights whose response is in packet no. 14.
+
+13. Packet no. 14 in the trace contains the status code and phrase associated with the response to the	
+	HTTP GET request.
+
+14. Status code - 200 
+	Phrase in response - OK
+
+15. 3 data containing TCP segments.
+

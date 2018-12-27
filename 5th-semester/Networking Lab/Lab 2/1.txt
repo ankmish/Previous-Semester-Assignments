@@ -1,0 +1,23 @@
+ The Basic HTTP GET/response interaction
+------------------------------------------
+
+
+Answer the following questions using the http-ethereal-trace-1 packet trace to answer the
+questions below :
+
+
+1. My browser is running HTTP 1.1 version and server is also running on HTTP 1.1 version.
+
+2. Language accepted by the browser is "en-US", "en" i.e, English US.
+
+3. My computer IP - 192.168.1.102
+   Gaia server IP - 63.240.76.19
+
+4. Status code returned by the server - 200
+
+5. The file was last modified on 
+   Tue, 23 Sep 2003 05:29:00 GMT
+
+6. 73 bytes of content is returned to browser.
+
+7. Yes, Cookies header is not listed. 

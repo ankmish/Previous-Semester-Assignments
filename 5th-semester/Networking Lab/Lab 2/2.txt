@@ -1,0 +1,19 @@
+ The HTTP CONDITIONAL GET/response interaction
+-----------------------------------------------
+
+Answer the following questions using the http-ethereal-trace-2 packet trace to answer the
+questions below :
+
+
+
+8. No, there is not any "IF-MODIFIED SINCE".
+
+9. Yes, the server explicitly returned me the files because I recieved a 200-OK response.
+
+10. Yes there is "IF-MODIFIED-SINCE" in 2nd HTTP GET.
+    Content present in it is ---- If-Modified-Since: Tue, 23 Sep 2003 05:35:00 GMT and a match query with a cache control.
+
+11. Status code returned - 304
+	Response Phrase : Not Modified
+	No the data is not explicit because I recieved a 304-Not Modified response.
+                                                                                                                                                                                                                                                                                       and there is no content provided by the server.
