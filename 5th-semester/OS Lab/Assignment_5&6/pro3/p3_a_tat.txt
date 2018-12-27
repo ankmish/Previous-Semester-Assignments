@@ -1,0 +1,5 @@
+#time(in sec)   #turnaroundtime1    #turnaroundtime2
+1				19.500				18.750
+2				20.250				18.750
+3				18.500				17.000
+ 

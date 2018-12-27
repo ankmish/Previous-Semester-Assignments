@@ -1,0 +1,88 @@
+/* PROBLEM - READER-WRITER PROBLEM
+
+1.  If one of the people tries editing the file, no other person should be reading or writing at the same time, 
+    otherwise changes will not be visible to him/her.
+    
+2.  However if some person is reading the file, then others may read it at the same time.
+
+*/
+
+/*
+
+Problem parameters:
+
+    One set of data is shared among a number of processes.
+    Once a writer is ready, it performs its write. Only one writer may write at a time.
+    If a process is writing, no other process can read it.
+    If at least one reader is reading, no other process can write.
+    Readers may not write and only read.
+    
+*/
+/*
+Assumption - Higher priority is given to Reader
+*/
+
+#include<unistd.h>
+#include<stdio.h>
+#include<stdlib.h>
+#include<pthread.h>
+
+pthread_mutex_t x,wsem;
+pthread_t tid;
+int readcount;
+void intialize()
+{
+	pthread_mutex_init(&x,NULL);
+	pthread_mutex_init(&wsem,NULL);
+	readcount=0;
+}
+void * reader()
+{
+	int waittime;
+	waittime = rand() % 7;
+	printf("\n Reader is trying to enter");
+	pthread_mutex_lock(&x);
+	readcount++;
+	if(readcount==1)
+		pthread_mutex_lock(&wsem);
+	printf("\n %d Reader is inside ",readcount);
+	pthread_mutex_unlock(&x);
+	sleep(waittime);
+	pthread_mutex_lock(&x);
+	readcount--;
+	if(readcount==0)
+		pthread_mutex_unlock(&wsem);
+	pthread_mutex_unlock(&x);
+	printf("\nReader is Leaving");
+}
+void * writer()
+{
+	int waittime;
+	waittime=rand() % 3;
+	printf("\nWriter is trying to enter");
+	pthread_mutex_lock(&wsem);
+	printf("\nWriter has entered");
+	printf("\n Writing content");
+	sleep(waittime);
+	pthread_mutex_unlock(&wsem);
+	printf("\nWriter is leaving");
+	sleep(30);
+	exit(0);
+}
+int main()
+{
+	int n1,n2;
+	int i;
+	intialize();
+	printf("\nEnter the no of readers : ");
+	scanf("%d",&n1);
+	printf("\nEnter the no of writers : ");
+	scanf("%d",&n2);
+	for(i=0;i<n1;i++)
+		pthread_create(&tid,NULL,reader,NULL);
+	for(i=0;i<n2;i++)
+		pthread_create(&tid,NULL,writer,NULL);
+	sleep(20);
+	return 0;
+
+}
