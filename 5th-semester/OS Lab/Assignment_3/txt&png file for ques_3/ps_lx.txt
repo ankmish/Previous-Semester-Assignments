@@ -1,0 +1,51 @@
+F   UID   PID  PPID PRI  NI    VSZ   RSS WCHAN  STAT TTY        TIME COMMAND
+1   500  3364     1  20   0  51028  2540 -      Sl   ?          0:00 /usr/bin/gnome-keyring-daemon --daemonize --login
+4   500  3374  3355  20   0  30792  6332 -      Ssl  ?          0:00 gnome-session
+1   500  3382     1  20   0   3628   604 -      S    ?          0:00 dbus-launch --sh-syntax --exit-with-session
+1   500  3383     1  20   0   3656  1464 -      Ss   ?          0:00 /bin/dbus-daemon --fork --print-pid 5 --print-address 7 --session
+1   500  3450     1  20   0  23136  6512 -      Ss   ?          0:00 /usr/bin/seahorse-agent --variables
+0   500  3453     1  20   0   7860  2056 -      S    ?          0:00 /usr/libexec/gvfsd
+0   500  3460     1  20   0   9004  4444 -      S    ?          0:00 /usr/libexec/gconfd-2
+1   500  3502     1  20   0 126124  8436 -      Ssl  ?          0:01 /usr/libexec/gnome-settings-daemon
+1   500  3504     1  20   0  27992  7116 -      Ss   ?          0:00 seahorse-daemon
+0   500  3518  3374  20   0 138032 12212 -      Sl   ?          0:04 metacity
+1   500  3522     1   9 -11 102188  3884 -      S<sl ?          0:00 /usr/bin/pulseaudio --start --log-target=syslog
+0   500  3523  3374  20   0 128828 41560 -      Sl   ?          0:08 gnome-panel
+0   500  3528  3522  20   0  11676  2424 -      S    ?          0:00 /usr/libexec/pulse/gconf-helper
+0   500  3529  3374  20   0 123152 24136 -      Sl   ?          0:14 nautilus
+0   500  3531     1  20   0  47024  2812 -      Ssl  ?          0:00 /usr/libexec/bonobo-activation-server --ac-activate --ior-output-fd=18
+0   500  3538     1  20   0  65172 11204 -      S    ?          0:09 /usr/libexec/wnck-applet --oaf-activate-iid=OAFIID:GNOME_Wncklet_Factory --oaf-ior-fd=18
+0   500  3539     1  20   0  62676  8636 -      S    ?          0:00 /usr/libexec/trashapplet --oaf-activate-iid=OAFIID:GNOME_Panel_TrashApplet_Factory --oaf-ior-fd=24
+0   500  3541     1  20   0  31228  3320 -      S    ?          0:00 /usr/libexec/gvfs-gdu-volume-monitor
+0   500  3542  3374  20   0  32368 11748 -      S    ?          0:00 python /usr/share/system-config-printer/applet.py
+0   500  3546     1  20   0  19912  3168 -      S    ?          0:00 /usr/libexec/gvfsd-trash --spawner :1.2 /org/gtk/gvfs/exec_spaw/0
+0   500  3554  3374  20   0  26332  7804 -      S    ?          0:00 gpk-update-icon
+0   500  3556  3374  20   0  55336  7564 -      S    ?          0:00 bluetooth-applet
+0   500  3558  3374  20   0  95796  9924 -      S    ?          0:00 nm-applet --sm-disable
+0   500  3559  3374  20   0 127300 10184 -      S    ?          0:00 gnome-volume-control-applet
+0   500  3562  3374  20   0  19708  5312 -      S    ?          0:00 /usr/libexec/polkit-gnome-authentication-agent-1
+0   500  3563  3374  20   0  20812  6504 -      S    ?          0:00 /usr/libexec/gdu-notification-daemon
+0   500  3565     1  20   0   8764  2140 -      S    ?          0:00 /usr/libexec/gvfs-gphoto2-volume-monitor
+0   500  3566  3374  20   0  48452  7620 -      Sl   ?          0:00 /usr/libexec/evolution/2.32/evolution-alarm-notify
+0   500  3569     1  20   0  21864  2016 -      Sl   ?          0:00 /usr/libexec/gvfs-afc-volume-monitor
+0   500  3575     1  20   0  16900  3984 -      S    ?          0:00 /usr/libexec/im-settings-daemon
+0   500  3596  3374  20   0  27608  6064 -      S    ?          0:00 abrt-applet
+0   500  3652  3374  20   0  21040  6888 -      S    ?          0:00 gnome-power-manager
+0   500  3740     1  20   0   6256  2340 -      S    ?          0:00 /usr/libexec/gconf-im-settings-daemon
+1   500  3748     1  20   0  21352  2312 -      Sl   ?          0:02 ./escd --key_Inserted="/usr/bin/esc" --on_Signal="/usr/bin/esc"
+1   500  3754     1  20   0  21760  6692 -      Ss   ?          0:00 gnome-screensaver
+0   500  3763     1  20   0 107464 10828 -      S    ?          0:00 /usr/bin/gnote --panel-applet --oaf-activate-iid=OAFIID:GnoteApplet_Factory --oaf-ior-fd=22
+0   500  3766     1  20   0  27216  7292 -      S    ?          0:00 /usr/libexec/notification-area-applet --oaf-activate-iid=OAFIID:GNOME_NotificationAreaApplet_Factory --oaf-ior-fd=28
+0   500  3767     1  20   0  37968 11184 -      S    ?          0:00 /usr/libexec/clock-applet --oaf-activate-iid=OAFIID:GNOME_ClockApplet_Factory --oaf-ior-fd=36
+0   500  3769     1  20   0  75708 10088 -      S    ?          0:00 /usr/libexec/gdm-user-switch-applet --oaf-activate-iid=OAFIID:GNOME_FastUserSwitchApplet_Factory --oaf-ior-fd=42
+0   500  3776     1  20   0  94332  6040 -      Sl   ?          0:00 /usr/libexec/e-calendar-factory
+0   500  3791     1  20   0   7892  2152 -      S    ?          0:00 /usr/libexec/gvfsd-burn --spawner :1.2 /org/gtk/gvfs/exec_spaw/1
+0   500  3805     1  20   0   7908  2004 -      S    ?          0:00 /usr/libexec/gvfsd-metadata
+0   500  7843     1  20   0 993712 196072 -     Sl   ?          1:35 /usr/lib/firefox/firefox
+0   500  8602     1  20   0  71876 12600 -      Sl   ?          0:00 /usr/bin/gnome-terminal -x /bin/sh -c cd '/home/user/Desktop/os lab3' && exec $SHELL
+0   500  8603  8602  20   0   2076   628 ?      S    ?          0:00 gnome-pty-helper
+0   500  8604  8602  20   0   5260  1692 -      Ss   pts/0      0:00 /bin/bash
+0   500  8732     1  20   0 122100 62708 -      Sl   ?          0:02 eog /home/user/Downloads/IMG_20180816_081007(1).jpg
+0   500  9355  7843  20   0 694324 201964 -     Sl   ?          1:15 /usr/lib/firefox/plugin-container -greomni /usr/lib/firefox/omni.ja -appomni /usr/lib/firefox/browser/omni.ja -appdir /usr/lib/firefox/browser 7843 tab
+0   500  9528  8604  20   0   1864   292 -      S+   pts/0      0:00 ./ps_lx
+0   500  9529  9528  20   0   4880   900 -      R+   pts/0      0:00 ps lx
