@@ -1,0 +1,86 @@
+!
+version 12.2
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname R2
+!
+!
+!
+enable password cisco
+!
+!
+!
+!
+!
+aaa new-model
+!
+aaa authentication login default group tacacs+ local 
+!
+!
+!
+!
+!
+!
+!
+username Admin2 secret 5 $1$mERr$4CFVt/60iQmc.ia/CrCAa/
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/0
+ ip address 192.168.2.1 255.255.255.0
+ duplex auto
+ speed auto
+!
+interface FastEthernet1/0
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface Serial2/0
+ ip address 10.1.1.1 255.255.255.252
+!
+interface Serial3/0
+ ip address 10.2.2.1 255.255.255.252
+ clock rate 2000000
+!
+interface FastEthernet4/0
+ no ip address
+ shutdown
+!
+interface FastEthernet5/0
+ no ip address
+ shutdown
+!
+router rip
+ network 10.0.0.0
+ network 192.168.2.0
+!
+ip classless
+!
+!
+!
+!
+tacacs-server host 192.168.2.2
+tacacs-server key tacacspass
+!
+!
+!
+line con 0
+ login authentication default
+line vty 0 4
+!
+!
+!
+end
+

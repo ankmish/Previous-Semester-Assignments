@@ -1,0 +1,90 @@
+!
+version 12.2
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname R1
+!
+!
+!
+enable password cisco
+!
+!
+!
+!
+!
+aaa new-model
+!
+aaa authentication login SSH-LOGIN local 
+aaa authentication login default local 
+!
+!
+!
+!
+!
+!
+!
+username Admin1 secret 5 $1$mERr$7n6je7c9FKvO.o.40Rj1Q0
+!
+!
+!
+!
+!
+ip domain-name ccnasecurity.com
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/0
+ ip address 192.168.1.1 255.255.255.0
+ duplex auto
+ speed auto
+!
+interface FastEthernet1/0
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface Serial2/0
+ ip address 10.1.1.2 255.255.255.252
+ clock rate 2000000
+!
+interface Serial3/0
+ no ip address
+ clock rate 2000000
+ shutdown
+!
+interface FastEthernet4/0
+ no ip address
+ shutdown
+!
+interface FastEthernet5/0
+ no ip address
+ shutdown
+!
+router rip
+ network 10.0.0.0
+ network 192.168.1.0
+!
+ip classless
+!
+!
+!
+!
+!
+!
+!
+line con 0
+ login authentication default
+line vty 0 4
+ login authentication SSH-LOGIN
+ transport input ssh
+!
+!
+!
+end
+
